@@ -77,6 +77,7 @@
     <div class="label">총자산 (가상 계좌)</div>
     <div id="total" class="total num">불러오는 중…</div>
     <div id="change" class="change num"></div>
+    <div id="principal" class="small num"></div>
     <div class="meta"><span id="strategy"></span><span>·</span><span id="updated"></span>
       <button id="refresh" class="refresh" type="button">↻ 새로고침</button></div>
   </header>
@@ -125,10 +126,13 @@
   const $ = id => document.getElementById(id);
 
   function render(d) {
-    const profit = d.value - d.start_cash;
+    const principal = d.principal ?? d.start_cash;   // 원금 = 처음 금액 + 매달 입금액
+    const profit = d.value - principal;
     $("total").textContent = won(d.value);
     $("change").className = "change num " + tone(profit);
     $("change").textContent = `${arrow(profit)} ${won(Math.abs(profit))} (${pct(d.return_pct)})`;
+    $("principal").textContent = `원금 ${won(principal)}` +
+      (d.monthly_deposit ? ` · 매달 1일 +${won(d.monthly_deposit)}` : "");
     $("strategy").textContent = d.strategy;
     $("updated").textContent = d.updated + " 기준";
     $("cash").textContent = won(d.cash);
@@ -149,6 +153,9 @@
       </li>`).join("") : `<li class="empty">보유 종목이 없어요.</li>`;
 
     $("trades").innerHTML = d.trades.length ? d.trades.map(t => {
+      if (t.action.includes("입금")) return `<li class="trade">
+        <div class="row"><div>💰 입금</div><div class="small num">${esc(t.date)}</div></div>
+        <div class="small">${esc(t.reason)}</div></li>`;
       const sell = t.action.includes("매도");
       const profit = t.profit_pct === "" ? "" :
         ` <span class="num ${tone(+t.profit_pct)}">${pct(+t.profit_pct)}</span>`;
