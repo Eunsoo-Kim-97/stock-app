@@ -38,7 +38,10 @@
   .label { font-size: 14px; color: var(--sub); }
   .total { font-size: 34px; font-weight: 700; letter-spacing: -0.02em; margin: 4px 0 6px; }
   .change { font-size: 16px; font-weight: 600; }
-  .meta { margin-top: 10px; font-size: 12px; color: var(--sub); }
+  .meta { margin-top: 10px; font-size: 12px; color: var(--sub); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .refresh { font: inherit; font-size: 12px; color: var(--text); background: var(--card); border: 1px solid var(--line);
+             border-radius: 999px; padding: 4px 10px; cursor: pointer; }
+  .refresh:disabled { opacity: .5; }
 
   .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
   .stat { background: var(--card); border-radius: 14px; padding: 12px; min-width: 0; }
@@ -74,7 +77,8 @@
     <div class="label">총자산 (가상 계좌)</div>
     <div id="total" class="total num">불러오는 중…</div>
     <div id="change" class="change num"></div>
-    <div class="meta"><span id="strategy"></span> · <span id="updated"></span></div>
+    <div class="meta"><span id="strategy"></span><span>·</span><span id="updated"></span>
+      <button id="refresh" class="refresh" type="button">↻ 새로고침</button></div>
   </header>
 
   <section class="stats">
@@ -160,12 +164,16 @@
     drawChart(d);
   }
 
+  let chart = null;
   function drawChart(d) {
-    if (d.history.length < 2 || !window.Chart) {
-      $("chart").parentElement.hidden = true;
-      $("chart-empty").hidden = false;
-      return;
-    }
+    if (chart) { chart.destroy(); chart = null; }   // 새로고침할 때 예전 그래프 지우기
+    const ok = d.history.length >= 2 && window.Chart;
+    $("chart").parentElement.hidden = !ok;
+    $("chart-empty").hidden = ok;
+    $("chart-empty").textContent = !window.Chart
+      ? "그래프 도구를 불러오지 못했어요. 인터넷 연결을 확인하고 새로고침해 주세요."
+      : "매일 아침 기록이 쌓이면 그래프가 그려져요.";
+    if (!ok) return;
     const labels = d.history.map(h => h.date.slice(5));
     const line = (data, color, width, dash) => ({
       data, borderColor: color, borderWidth: width, borderDash: dash || [],
@@ -175,7 +183,7 @@
       const map = Object.fromEntries(series.map(s => [s.date, s.value]));
       return d.history.map(h => map[h.date] ?? null);
     };
-    new Chart($("chart"), {
+    chart = new Chart($("chart"), {
       type: "line",
       data: { labels, datasets: [
         line(d.history.map(h => h.value), css("--up"), 2.5),
@@ -197,14 +205,24 @@
     });
   }
 
-  fetch("data.json?t=" + Date.now())
-    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(render)
-    .catch(() => {
-      document.querySelector("main").insertAdjacentHTML("afterbegin",
-        `<div class="error">계좌 데이터를 불러오지 못했어요. 인터넷 연결을 확인해 주세요.</div>`);
-      $("total").textContent = "-";
-    });
+  // 최신 데이터 가져오기: 앱을 열 때, 다시 화면으로 돌아올 때, 새로고침 버튼을 누를 때
+  function load() {
+    $("refresh").disabled = true;
+    document.querySelector(".error")?.remove();
+    fetch("data.json?t=" + Date.now(), { cache: "no-store" })
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(render)
+      .catch(() => {
+        document.querySelector("main").insertAdjacentHTML("afterbegin",
+          `<div class="error">계좌 데이터를 불러오지 못했어요. 인터넷 연결을 확인해 주세요.</div>`);
+      })
+      .finally(() => { $("refresh").disabled = false; });
+  }
+  $("refresh").addEventListener("click", load);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") load();
+  });
+  load();
 
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
 </script>
