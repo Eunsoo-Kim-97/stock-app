@@ -1,0 +1,198 @@
+{
+ "updated": "10/10 17:01",
+ "strategy": "④ 듀얼 모멘텀 (월 1회)",
+ "start_cash": 10000000,
+ "value": 9991451,
+ "cash": 0,
+ "return_pct": -0.09,
+ "next_rebalance": "11/02(월)",
+ "history": [
+  {
+   "date": "2026-10-09",
+   "value": 9991451
+  }
+ ],
+ "benchmarks": {
+  "kospi": [],
+  "sp500": [
+   {
+    "date": "2026-10-09",
+    "value": 10000000
+   }
+  ]
+ },
+ "positions": [
+  {
+   "name": "마이크론",
+   "sector": "반도체",
+   "qty": "0.7248",
+   "avg_price": 1379786,
+   "price": 1379786,
+   "value": 1000000,
+   "change_pct": 0.0,
+   "weight": 10.0
+  },
+  {
+   "name": "SK하이닉스",
+   "sector": "반도체",
+   "qty": "0.5949",
+   "avg_price": 1681000,
+   "price": 1681000,
+   "value": 1000000,
+   "change_pct": 0.0,
+   "weight": 10.0
+  },
+  {
+   "name": "삼성에스디에스",
+   "sector": "AI",
+   "qty": "5.1203",
+   "avg_price": 195300,
+   "price": 195300,
+   "value": 1000000,
+   "change_pct": 0.0,
+   "weight": 10.0
+  },
+  {
+   "name": "삼성화재",
+   "sector": "보험",
+   "qty": "1.634",
+   "avg_price": 612000,
+   "price": 612000,
+   "value": 1000000,
+   "change_pct": 0.0,
+   "weight": 10.0
+  },
+  {
+   "name": "마이크로소프트",
+   "sector": "AI",
+   "qty": "1.3938",
+   "avg_price": 717475,
+   "price": 717475,
+   "value": 1000000,
+   "change_pct": 0.0,
+   "weight": 10.0
+  },
+  {
+   "name": "삼성전자",
+   "sector": "반도체",
+   "qty": "3.8168",
+   "avg_price": 262000,
+   "price": 262000,
+   "value": 1000000,
+   "change_pct": 0.0,
+   "weight": 10.0
+  },
+  {
+   "name": "LS ELECTRIC",
+   "sector": "전력",
+   "qty": "5.1151",
+   "avg_price": 195500,
+   "price": 195500,
+   "value": 1000000,
+   "change_pct": 0.0,
+   "weight": 10.0
+  },
+  {
+   "name": "TSMC",
+   "sector": "반도체",
+   "qty": "1.6452",
+   "avg_price": 607843,
+   "price": 607843,
+   "value": 1000000,
+   "change_pct": 0.0,
+   "weight": 10.0
+  },
+  {
+   "name": "삼성SDI",
+   "sector": "2차전지",
+   "qty": "1.7575",
+   "avg_price": 569000,
+   "price": 569000,
+   "value": 1000000,
+   "change_pct": 0.0,
+   "weight": 10.0
+  },
+  {
+   "name": "삼성생명",
+   "sector": "보험",
+   "qty": "3.6857",
+   "avg_price": 269000,
+   "price": 269000,
+   "value": 991451,
+   "change_pct": 0.0,
+   "weight": 9.9
+  }
+ ],
+ "trades": [
+  {
+   "date": "2026-10-09",
+   "action": "🔴매수",
+   "name": "삼성생명",
+   "profit_pct": "",
+   "reason": "6개월 수익률 +15%"
+  },
+  {
+   "date": "2026-10-09",
+   "action": "🔴매수",
+   "name": "삼성SDI",
+   "profit_pct": "",
+   "reason": "6개월 수익률 +18%"
+  },
+  {
+   "date": "2026-10-09",
+   "action": "🔴매수",
+   "name": "TSMC",
+   "profit_pct": "",
+   "reason": "6개월 수익률 +24%"
+  },
+  {
+   "date": "2026-10-09",
+   "action": "🔴매수",
+   "name": "LS ELECTRIC",
+   "profit_pct": "",
+   "reason": "6개월 수익률 +24%"
+  },
+  {
+   "date": "2026-10-09",
+   "action": "🔴매수",
+   "name": "삼성전자",
+   "profit_pct": "",
+   "reason": "6개월 수익률 +27%"
+  },
+  {
+   "date": "2026-10-09",
+   "action": "🔴매수",
+   "name": "마이크로소프트",
+   "profit_pct": "",
+   "reason": "6개월 수익률 +28%"
+  },
+  {
+   "date": "2026-10-09",
+   "action": "🔴매수",
+   "name": "삼성화재",
+   "profit_pct": "",
+   "reason": "6개월 수익률 +30%"
+  },
+  {
+   "date": "2026-10-09",
+   "action": "🔴매수",
+   "name": "삼성에스디에스",
+   "profit_pct": "",
+   "reason": "6개월 수익률 +31%"
+  },
+  {
+   "date": "2026-10-09",
+   "action": "🔴매수",
+   "name": "SK하이닉스",
+   "profit_pct": "",
+   "reason": "6개월 수익률 +64%"
+  },
+  {
+   "date": "2026-10-09",
+   "action": "🔴매수",
+   "name": "마이크론",
+   "profit_pct": "",
+   "reason": "6개월 수익률 +129%"
+  }
+ ]
+}
