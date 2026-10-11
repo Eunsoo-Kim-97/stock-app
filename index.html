@@ -58,7 +58,7 @@
   ul { list-style: none; margin: 0; padding: 0; }
   .pos { padding: 12px 0; border-top: 1px solid var(--line); }
   .pos:first-child { border-top: 0; padding-top: 0; }
-  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 12px; }
   .name { font-weight: 600; font-size: 15px; min-width: 0; overflow-wrap: anywhere; }
   .tag { font-size: 11px; color: var(--sub); margin-left: 6px; font-weight: 500; }
   .small { font-size: 12px; color: var(--sub); margin-top: 3px; }
@@ -96,6 +96,7 @@
       <span><i style="background:var(--up)"></i>내 계좌</span>
       <span><i style="background:var(--bench1)"></i>코스피</span>
       <span><i style="background:var(--bench2)"></i>S&amp;P500</span>
+      <span>· 쉬는 날은 전날 금액으로 이어요</span>
     </div>
   </section>
 
@@ -171,31 +172,60 @@
     drawChart(d);
   }
 
+  // 날짜를 한국 시간 기준 "2026-10-09" 모양으로 (toISOString 은 세계 표준시라 하루가 밀려요)
+  const dayKey = t => `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, "0")}-${String(t.getDate()).padStart(2, "0")}`;
+  const parseDay = s => new Date(s + "T00:00:00");
+
   let chart = null;
   function drawChart(d) {
     if (chart) { chart.destroy(); chart = null; }   // 새로고침할 때 예전 그래프 지우기
-    const ok = d.history.length >= 2 && window.Chart;
+
+    // 기록 시작일부터 오늘까지 모든 날짜를 만들어요. (주말·공휴일 포함)
+    const days = [];
+    if (d.history.length) {
+      const today = new Date(); today.setHours(0, 0, 0, 0);
+      const lastRecord = parseDay(d.history[d.history.length - 1].date);
+      const end = today > lastRecord ? today : lastRecord;
+      for (let t = parseDay(d.history[0].date); t <= end; t.setDate(t.getDate() + 1)) days.push(new Date(t));
+    }
+
+    const ok = days.length >= 2 && window.Chart;
     $("chart").parentElement.hidden = !ok;
     $("chart-empty").hidden = ok;
     $("chart-empty").textContent = !window.Chart
       ? "그래프 도구를 불러오지 못했어요. 인터넷 연결을 확인하고 새로고침해 주세요."
       : "매일 아침 기록이 쌓이면 그래프가 그려져요.";
     if (!ok) return;
-    const labels = d.history.map(h => h.date.slice(5));
+
+    // 장이 쉬는 날은 기록이 없어서, 전날 금액을 그대로 이어서 그려요.
+    const fill = series => {
+      const map = Object.fromEntries(series.map(s => [s.date, s.value]));
+      let last = null;
+      return days.map(t => (last = map[dayKey(t)] ?? last));
+    };
+    const holidays = d.holidays || {};
+    const labels = days.map(t => {
+      const md = `${t.getMonth() + 1}/${t.getDate()}`;
+      return holidays[dayKey(t)] ? [md, "(공휴일)"] : md;   // 공휴일은 아래에 (공휴일)
+    });
+    const dayColor = i => {
+      const t = days[i];
+      if (!t) return css("--sub");
+      if (holidays[dayKey(t)] || t.getDay() === 0) return css("--up");   // 일요일·공휴일: 빨강
+      if (t.getDay() === 6) return css("--down");                        // 토요일: 파랑
+      return css("--sub");
+    };
+
     const line = (data, color, width, dash) => ({
       data, borderColor: color, borderWidth: width, borderDash: dash || [],
       pointRadius: 0, tension: 0.25, spanGaps: true,
     });
-    const align = series => {   // 지수 기록을 계좌 날짜에 맞춰요.
-      const map = Object.fromEntries(series.map(s => [s.date, s.value]));
-      return d.history.map(h => map[h.date] ?? null);
-    };
     chart = new Chart($("chart"), {
       type: "line",
       data: { labels, datasets: [
-        line(d.history.map(h => h.value), css("--up"), 2.5),
-        line(align(d.benchmarks.kospi), css("--bench1"), 1.5),
-        line(align(d.benchmarks.sp500), css("--bench2"), 1.5, [4, 4]),
+        line(fill(d.history), css("--up"), 2.5),
+        line(fill(d.benchmarks.kospi), css("--bench1"), 1.5),
+        line(fill(d.benchmarks.sp500), css("--bench2"), 1.5, [4, 4]),
       ]},
       options: {
         responsive: true, maintainAspectRatio: false,
@@ -204,7 +234,9 @@
           tooltip: { callbacks: { label: c => c.raw == null ? "" :
             ["내 계좌", "코스피", "S&P500"][c.datasetIndex] + " " + won(c.raw) } } },
         scales: {
-          x: { grid: { display: false }, ticks: { color: css("--sub"), maxTicksLimit: 5 } },
+          x: { grid: { display: false },
+               ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 7, font: { weight: "600" },
+                        color: c => dayColor(c.tick.value) } },   // 토요일 파랑, 일요일·공휴일 빨강
           y: { grid: { color: css("--line") }, ticks: { color: css("--sub"),
                callback: v => (v / 10000).toLocaleString("ko-KR") + "만" } },
         },
