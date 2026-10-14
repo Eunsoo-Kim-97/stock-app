@@ -112,7 +112,7 @@
 
   <footer>
     가상 계좌예요. 실제 돈이 아니에요.<br>
-    매일 아침 8시쯤 업데이트돼요.
+    평일 9시 5분(장 시작)과 15시 40분(장 마감)에 업데이트돼요.
   </footer>
 </main>
 
@@ -135,7 +135,7 @@
     $("principal").textContent = `원금 ${won(principal)}` +
       (d.monthly_deposit ? ` · 매달 1일 +${won(d.monthly_deposit)}` : "");
     $("strategy").textContent = d.strategy;
-    $("updated").textContent = d.updated + " 기준";
+    $("updated").textContent = d.updated + " 기준" + (d.price_status ? ` (${d.price_status})` : "");
     $("cash").textContent = won(d.cash);
     $("count").textContent = d.positions.length + "개";
     $("next").textContent = d.next_rebalance;
@@ -180,13 +180,17 @@
   function drawChart(d) {
     if (chart) { chart.destroy(); chart = null; }   // 새로고침할 때 예전 그래프 지우기
 
+    // 장 마감 전이면 오늘 장중 자산을 오늘 점으로 써요. (15:40 마감 업데이트 때 종가로 바뀌어요)
+    const history = [...d.history];
+    if (d.live && !history.some(h => h.date === d.live.date)) history.push(d.live);
+
     // 기록 시작일부터 오늘까지 모든 날짜를 만들어요. (주말·공휴일 포함)
     const days = [];
-    if (d.history.length) {
+    if (history.length) {
       const today = new Date(); today.setHours(0, 0, 0, 0);
-      const lastRecord = parseDay(d.history[d.history.length - 1].date);
+      const lastRecord = parseDay(history[history.length - 1].date);
       const end = today > lastRecord ? today : lastRecord;
-      for (let t = parseDay(d.history[0].date); t <= end; t.setDate(t.getDate() + 1)) days.push(new Date(t));
+      for (let t = parseDay(history[0].date); t <= end; t.setDate(t.getDate() + 1)) days.push(new Date(t));
     }
 
     const ok = days.length >= 2 && window.Chart;
@@ -223,7 +227,7 @@
     chart = new Chart($("chart"), {
       type: "line",
       data: { labels, datasets: [
-        line(fill(d.history), css("--up"), 2.5),
+        line(fill(history), css("--up"), 2.5),
         line(fill(d.benchmarks.kospi), css("--bench1"), 1.5),
         line(fill(d.benchmarks.sp500), css("--bench2"), 1.5, [4, 4]),
       ]},
