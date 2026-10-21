@@ -1,18 +1,18 @@
 {
- "updated": "10/21 09:05",
- "price_status": "장중 가격",
+ "updated": "10/21 15:40",
+ "price_status": "오늘 종가",
  "live": {
   "date": "2026-10-21",
-  "time": "09:05",
-  "value": 9146228
+  "time": "마감",
+  "value": 9142992
  },
  "strategy": "④ 듀얼 모멘텀 (월 1회)",
  "start_cash": 10000000,
  "principal": 10000000,
  "monthly_deposit": 300000,
- "value": 9148990,
+ "value": 9143199,
  "cash": 0,
- "return_pct": -8.51,
+ "return_pct": -8.57,
  "next_rebalance": "11/02(월)",
  "history": [
   {
@@ -58,6 +58,10 @@
   {
    "date": "2026-10-20",
    "value": 9157967
+  },
+  {
+   "date": "2026-10-21",
+   "value": 9142992
   }
  ],
  "holidays": {
@@ -141,6 +145,14 @@
    {
     "date": "2026-10-19",
     "value": 8309589
+   },
+   {
+    "date": "2026-10-20",
+    "value": 7999464
+   },
+   {
+    "date": "2026-10-21",
+    "value": 8244084
    }
   ],
   "sp500": [
@@ -196,29 +208,29 @@
    "sector": "보험",
    "qty": "2.2544",
    "avg_price": 443572,
-   "price": 472051,
-   "value": 1064203,
-   "change_pct": 6.42,
-   "weight": 11.6
+   "price": 473947,
+   "value": 1068479,
+   "change_pct": 6.85,
+   "weight": 11.7
   },
   {
    "name": "버크셔해서웨이",
    "sector": "보험",
    "qty": "1.4756",
    "avg_price": 677707,
-   "price": 705194,
-   "value": 1040559,
-   "change_pct": 4.06,
-   "weight": 11.4
+   "price": 715154,
+   "value": 1055255,
+   "change_pct": 5.53,
+   "weight": 11.5
   },
   {
    "name": "마이크로소프트",
    "sector": "AI",
    "qty": "1.3997",
    "avg_price": 714445,
-   "price": 706903,
-   "value": 989444,
-   "change_pct": -1.06,
+   "price": 704621,
+   "value": 986250,
+   "change_pct": -1.37,
    "weight": 10.8
   },
   {
@@ -226,70 +238,70 @@
    "sector": "AI",
    "qty": "2.1423",
    "avg_price": 466778,
-   "price": 456032,
-   "value": 976977,
-   "change_pct": -2.3,
-   "weight": 10.7
+   "price": 450803,
+   "value": 965775,
+   "change_pct": -3.42,
+   "weight": 10.6
   },
   {
    "name": "테슬라",
    "sector": "2차전지",
    "qty": "1.9482",
    "avg_price": 513286,
-   "price": 487672,
-   "value": 950099,
-   "change_pct": -4.99,
-   "weight": 10.4
+   "price": 495091,
+   "value": 964553,
+   "change_pct": -3.54,
+   "weight": 10.5
   },
   {
    "name": "엔비디아",
    "sector": "반도체",
    "qty": "3.0739",
    "avg_price": 325322,
-   "price": 287640,
-   "value": 884170,
-   "change_pct": -11.58,
-   "weight": 9.7
-  },
-  {
-   "name": "GE버노바",
-   "sector": "전력",
-   "qty": "0.7246",
-   "avg_price": 1345564,
-   "price": 1203665,
-   "value": 872235,
-   "change_pct": -10.55,
-   "weight": 9.5
+   "price": 286779,
+   "value": 881525,
+   "change_pct": -11.85,
+   "weight": 9.6
   },
   {
    "name": "TSMC",
    "sector": "반도체",
    "qty": "1.5368",
    "avg_price": 650684,
-   "price": 556783,
-   "value": 855689,
-   "change_pct": -14.43,
-   "weight": 9.4
+   "price": 563146,
+   "value": 865468,
+   "change_pct": -13.45,
+   "weight": 9.5
+  },
+  {
+   "name": "GE버노바",
+   "sector": "전력",
+   "qty": "0.7246",
+   "avg_price": 1345564,
+   "price": 1179509,
+   "value": 854731,
+   "change_pct": -12.34,
+   "weight": 9.3
   },
   {
    "name": "마이크론",
    "sector": "반도체",
    "qty": "0.6991",
    "avg_price": 1430395,
-   "price": 1198974,
-   "value": 838212,
-   "change_pct": -16.18,
-   "weight": 9.2
+   "price": 1187114,
+   "value": 829920,
+   "change_pct": -17.01,
+   "weight": 9.1
   },
   {
    "name": "로켓랩",
    "sector": "우주항공",
    "qty": "9.9543",
    "avg_price": 100459,
-   "price": 68051,
-   "value": 677402,
-   "change_pct": -32.26,
-   "weight": 7.4
+   "price": 67432,
+   "value": 671244,
+   "change_pct": -32.88,
+   "weight": 7.3
   }
  ],
  "trades": [
