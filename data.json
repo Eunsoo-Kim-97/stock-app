@@ -1,18 +1,18 @@
 {
- "updated": "10/26 09:05",
- "price_status": "장중 가격",
+ "updated": "10/26 15:40",
+ "price_status": "오늘 종가",
  "live": {
   "date": "2026-10-26",
-  "time": "09:05",
-  "value": 8950583
+  "time": "마감",
+  "value": 8948283
  },
  "strategy": "④ 듀얼 모멘텀 (월 1회)",
  "start_cash": 10000000,
  "principal": 10000000,
  "monthly_deposit": 300000,
- "value": 8950650,
+ "value": 8938135,
  "cash": 0,
- "return_pct": -10.49,
+ "return_pct": -10.62,
  "next_rebalance": "11/02(월)",
  "history": [
   {
@@ -70,6 +70,10 @@
   {
    "date": "2026-10-23",
    "value": 8974082
+  },
+  {
+   "date": "2026-10-26",
+   "value": 8948283
   }
  ],
  "holidays": {
@@ -169,6 +173,10 @@
    {
     "date": "2026-10-23",
     "value": 7995948
+   },
+   {
+    "date": "2026-10-26",
+    "value": 7884472
    }
   ],
   "sp500": [
@@ -236,9 +244,9 @@
    "sector": "보험",
    "qty": "2.2544",
    "avg_price": 443572,
-   "price": 469821,
-   "value": 1059177,
-   "change_pct": 5.92,
+   "price": 469164,
+   "value": 1057696,
+   "change_pct": 5.77,
    "weight": 11.8
   },
   {
@@ -246,9 +254,9 @@
    "sector": "보험",
    "qty": "1.4756",
    "avg_price": 677707,
-   "price": 717334,
-   "value": 1058472,
-   "change_pct": 5.85,
+   "price": 716331,
+   "value": 1056992,
+   "change_pct": 5.7,
    "weight": 11.8
   },
   {
@@ -256,9 +264,9 @@
    "sector": "AI",
    "qty": "1.3997",
    "avg_price": 714445,
-   "price": 693942,
-   "value": 971303,
-   "change_pct": -2.87,
+   "price": 692972,
+   "value": 969945,
+   "change_pct": -3.01,
    "weight": 10.9
   },
   {
@@ -266,9 +274,9 @@
    "sector": "2차전지",
    "qty": "1.9482",
    "avg_price": 513286,
-   "price": 492458,
-   "value": 959423,
-   "change_pct": -4.06,
+   "price": 491770,
+   "value": 958082,
+   "change_pct": -4.19,
    "weight": 10.7
   },
   {
@@ -276,9 +284,9 @@
    "sector": "AI",
    "qty": "2.1423",
    "avg_price": 466778,
-   "price": 423647,
-   "value": 907599,
-   "change_pct": -9.24,
+   "price": 423055,
+   "value": 906329,
+   "change_pct": -9.37,
    "weight": 10.1
   },
   {
@@ -286,9 +294,9 @@
    "sector": "반도체",
    "qty": "3.0739",
    "avg_price": 325322,
-   "price": 279106,
-   "value": 857939,
-   "change_pct": -14.21,
+   "price": 278716,
+   "value": 856740,
+   "change_pct": -14.33,
    "weight": 9.6
   },
   {
@@ -296,9 +304,9 @@
    "sector": "반도체",
    "qty": "1.5368",
    "avg_price": 650684,
-   "price": 553701,
-   "value": 850953,
-   "change_pct": -14.9,
+   "price": 552927,
+   "value": 849763,
+   "change_pct": -15.02,
    "weight": 9.5
   },
   {
@@ -306,9 +314,9 @@
    "sector": "반도체",
    "qty": "0.6991",
    "avg_price": 1430395,
-   "price": 1161025,
-   "value": 811681,
-   "change_pct": -18.83,
+   "price": 1159402,
+   "value": 810546,
+   "change_pct": -18.95,
    "weight": 9.1
   },
   {
@@ -316,9 +324,9 @@
    "sector": "전력",
    "qty": "0.7246",
    "avg_price": 1345564,
-   "price": 1078269,
-   "value": 781367,
-   "change_pct": -19.86,
+   "price": 1076762,
+   "value": 780275,
+   "change_pct": -19.98,
    "weight": 8.7
   },
   {
@@ -326,9 +334,9 @@
    "sector": "우주항공",
    "qty": "9.9543",
    "avg_price": 100459,
-   "price": 69591,
-   "value": 692736,
-   "change_pct": -30.73,
+   "price": 69494,
+   "value": 691767,
+   "change_pct": -30.82,
    "weight": 7.7
   }
  ],
