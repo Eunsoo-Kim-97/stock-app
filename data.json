@@ -1,6 +1,6 @@
 {
- "updated": "10/28 15:40",
- "price_status": "오늘 종가",
+ "updated": "10/31 20:14",
+ "price_status": "장 쉬는 날 · 최근 종가",
  "live": {
   "date": "2026-10-28",
   "time": "마감",
@@ -10,9 +10,9 @@
  "start_cash": 10000000,
  "principal": 10000000,
  "monthly_deposit": 300000,
- "value": 9429640,
+ "value": 9036610,
  "cash": 0,
- "return_pct": -5.7,
+ "return_pct": -9.63,
  "next_rebalance": "11/02(월)",
  "history": [
   {
@@ -82,6 +82,14 @@
   {
    "date": "2026-10-28",
    "value": 9431966
+  },
+  {
+   "date": "2026-10-29",
+   "value": 9476238
+  },
+  {
+   "date": "2026-10-30",
+   "value": 9308928
   }
  ],
  "holidays": {
@@ -192,7 +200,15 @@
    },
    {
     "date": "2026-10-28",
-    "value": 8677988
+    "value": 8661723
+   },
+   {
+    "date": "2026-10-29",
+    "value": 8553993
+   },
+   {
+    "date": "2026-10-30",
+    "value": 8255897
    }
   ],
   "sp500": [
@@ -259,6 +275,18 @@
    {
     "date": "2026-10-27",
     "value": 9876799
+   },
+   {
+    "date": "2026-10-28",
+    "value": 9904143
+   },
+   {
+    "date": "2026-10-29",
+    "value": 9873972
+   },
+   {
+    "date": "2026-10-30",
+    "value": 9694510
    }
   ]
  },
@@ -268,79 +296,59 @@
    "sector": "보험",
    "qty": "2.2544",
    "avg_price": 443572,
-   "price": 476609,
-   "value": 1074480,
-   "change_pct": 7.45,
-   "weight": 11.4
+   "price": 486137,
+   "value": 1095959,
+   "change_pct": 9.6,
+   "weight": 12.1
   },
   {
    "name": "버크셔해서웨이",
    "sector": "보험",
    "qty": "1.4756",
    "avg_price": 677707,
-   "price": 726439,
-   "value": 1071908,
-   "change_pct": 7.19,
-   "weight": 11.4
+   "price": 724278,
+   "value": 1068719,
+   "change_pct": 6.87,
+   "weight": 11.8
   },
   {
    "name": "테슬라",
    "sector": "2차전지",
    "qty": "1.9482",
    "avg_price": 513286,
-   "price": 545120,
-   "value": 1062021,
-   "change_pct": 6.2,
-   "weight": 11.3
+   "price": 533786,
+   "value": 1039940,
+   "change_pct": 3.99,
+   "weight": 11.5
   },
   {
    "name": "마이크로소프트",
    "sector": "AI",
    "qty": "1.3997",
    "avg_price": 714445,
-   "price": 710840,
-   "value": 994954,
-   "change_pct": -0.5,
-   "weight": 10.6
-  },
-  {
-   "name": "알파벳",
-   "sector": "AI",
-   "qty": "2.1423",
-   "avg_price": 466778,
-   "price": 428888,
-   "value": 918826,
-   "change_pct": -8.12,
-   "weight": 9.7
-  },
-  {
-   "name": "TSMC",
-   "sector": "반도체",
-   "qty": "1.5368",
-   "avg_price": 650684,
-   "price": 584467,
-   "value": 898234,
-   "change_pct": -10.18,
-   "weight": 9.5
+   "price": 696802,
+   "value": 975305,
+   "change_pct": -2.47,
+   "weight": 10.8
   },
   {
    "name": "엔비디아",
    "sector": "반도체",
    "qty": "3.0739",
    "avg_price": 325322,
-   "price": 291571,
-   "value": 896254,
-   "change_pct": -10.37,
-   "weight": 9.5
+   "price": 273215,
+   "value": 839829,
+   "change_pct": -16.02,
+   "weight": 9.3
   },
   {
-   "name": "마이크론",
+   "name": "TSMC",
    "sector": "반도체",
-   "qty": "0.6991",
-   "avg_price": 1430395,
-   "price": 1242542,
-   "value": 868670,
-   "change_pct": -13.13,
+   "qty": "1.5368",
+   "avg_price": 650684,
+   "price": 542224,
+   "value": 833314,
+   "change_pct": -16.67,
    "weight": 9.2
   },
   {
@@ -348,20 +356,40 @@
    "sector": "전력",
    "qty": "0.7246",
    "avg_price": 1345564,
-   "price": 1197483,
-   "value": 867755,
-   "change_pct": -11.01,
+   "price": 1145342,
+   "value": 829972,
+   "change_pct": -14.88,
    "weight": 9.2
+  },
+  {
+   "name": "마이크론",
+   "sector": "반도체",
+   "qty": "0.6991",
+   "avg_price": 1430395,
+   "price": 1181216,
+   "value": 825797,
+   "change_pct": -17.42,
+   "weight": 9.1
+  },
+  {
+   "name": "알파벳",
+   "sector": "AI",
+   "qty": "2.1423",
+   "avg_price": 466778,
+   "price": 373614,
+   "value": 800411,
+   "change_pct": -19.96,
+   "weight": 8.9
   },
   {
    "name": "로켓랩",
    "sector": "우주항공",
    "qty": "9.9543",
    "avg_price": 100459,
-   "price": 78010,
-   "value": 776538,
-   "change_pct": -22.35,
-   "weight": 8.2
+   "price": 73070,
+   "value": 727363,
+   "change_pct": -27.26,
+   "weight": 8.0
   }
  ],
  "trades": [
