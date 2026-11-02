@@ -132,8 +132,10 @@
     $("total").textContent = won(d.value);
     $("change").className = "change num " + tone(profit);
     $("change").textContent = `${arrow(profit)} ${won(Math.abs(profit))} (${pct(d.return_pct)})`;
+    // 원금에 이미 들어간 입금 횟수와, 다음 입금 예정일을 따로 보여줘요.
     $("principal").textContent = `원금 ${won(principal)}` +
-      (d.monthly_deposit ? ` · 매달 1일 +${won(d.monthly_deposit)}` : "");
+      (d.deposit_count ? ` (입금 ${d.deposit_count}회 포함)` : "") +
+      (d.monthly_deposit && d.next_deposit ? ` · 다음 입금 ${d.next_deposit} +${won(d.monthly_deposit)} 예정` : "");
     $("strategy").textContent = d.strategy;
     $("updated").textContent = d.updated + " 기준" + (d.price_status ? ` (${d.price_status})` : "");
     $("cash").textContent = won(d.cash);
