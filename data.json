@@ -3,16 +3,18 @@
  "price_status": "오늘 종가",
  "live": {
   "date": "2026-11-02",
-  "time": "21:39",
-  "value": 9369227
+  "time": "마감",
+  "value": 9367131
  },
  "strategy": "④ 듀얼 모멘텀 (월 1회)",
  "start_cash": 10000000,
  "principal": 10300000,
  "monthly_deposit": 300000,
- "value": 9369227,
+ "deposit_count": 1,
+ "next_deposit": "12/01(화)",
+ "value": 9367131,
  "cash": 0,
- "return_pct": -9.04,
+ "return_pct": -9.06,
  "next_rebalance": "12/01(화)",
  "history": [
   {
@@ -90,6 +92,10 @@
   {
    "date": "2026-10-30",
    "value": 9308928
+  },
+  {
+   "date": "2026-11-02",
+   "value": 9367131
   }
  ],
  "holidays": {
@@ -300,9 +306,9 @@
    "sector": "보험",
    "qty": "2.2544",
    "avg_price": 443572,
-   "price": 488926,
-   "value": 1102247,
-   "change_pct": 10.22,
+   "price": 488751,
+   "value": 1101853,
+   "change_pct": 10.19,
    "weight": 11.8
   },
   {
@@ -310,9 +316,9 @@
    "sector": "보험",
    "qty": "1.4756",
    "avg_price": 677707,
-   "price": 728434,
-   "value": 1074851,
-   "change_pct": 7.49,
+   "price": 728173,
+   "value": 1074467,
+   "change_pct": 7.45,
    "weight": 11.5
   },
   {
@@ -320,9 +326,9 @@
    "sector": "AI",
    "qty": "1.3997",
    "avg_price": 714445,
-   "price": 700800,
-   "value": 980901,
-   "change_pct": -1.91,
+   "price": 700549,
+   "value": 980550,
+   "change_pct": -1.94,
    "weight": 10.5
   },
   {
@@ -330,9 +336,9 @@
    "sector": "방산",
    "qty": "1.0962",
    "avg_price": 854933,
-   "price": 855271,
-   "value": 937583,
-   "change_pct": 0.04,
+   "price": 854965,
+   "value": 937247,
+   "change_pct": 0.0,
    "weight": 10.0
   },
   {
@@ -340,9 +346,9 @@
    "sector": "방산",
    "qty": "3.4947",
    "avg_price": 268178,
-   "price": 268283,
-   "value": 937583,
-   "change_pct": 0.04,
+   "price": 268188,
+   "value": 937247,
+   "change_pct": 0.0,
    "weight": 10.0
   },
   {
@@ -380,9 +386,9 @@
    "sector": "반도체",
    "qty": "0.6991",
    "avg_price": 1430395,
-   "price": 1187993,
-   "value": 830535,
-   "change_pct": -16.95,
+   "price": 1187569,
+   "value": 830238,
+   "change_pct": -16.98,
    "weight": 8.9
   },
   {
