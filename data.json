@@ -1,10 +1,10 @@
 {
- "updated": "11/02 21:39",
+ "updated": "11/02 21:41",
  "price_status": "오늘 종가",
  "live": {
   "date": "2026-11-02",
   "time": "마감",
-  "value": 9367131
+  "value": 9386898
  },
  "strategy": "④ 듀얼 모멘텀 (월 1회)",
  "start_cash": 10000000,
@@ -12,9 +12,9 @@
  "monthly_deposit": 300000,
  "deposit_count": 1,
  "next_deposit": "12/01(화)",
- "value": 9367131,
+ "value": 9386898,
  "cash": 0,
- "return_pct": -9.06,
+ "return_pct": -8.87,
  "next_rebalance": "12/01(화)",
  "history": [
   {
@@ -95,7 +95,7 @@
   },
   {
    "date": "2026-11-02",
-   "value": 9367131
+   "value": 9386898
   }
  ],
  "holidays": {
@@ -306,39 +306,49 @@
    "sector": "보험",
    "qty": "2.2544",
    "avg_price": 443572,
-   "price": 488751,
-   "value": 1101853,
-   "change_pct": 10.19,
-   "weight": 11.8
+   "price": 488729,
+   "value": 1101791,
+   "change_pct": 10.18,
+   "weight": 11.7
   },
   {
    "name": "버크셔해서웨이",
    "sector": "보험",
    "qty": "1.4756",
    "avg_price": 677707,
-   "price": 728173,
-   "value": 1074467,
-   "change_pct": 7.45,
-   "weight": 11.5
+   "price": 728141,
+   "value": 1074445,
+   "change_pct": 7.44,
+   "weight": 11.4
+  },
+  {
+   "name": "삼성에스디에스",
+   "sector": "AI",
+   "qty": "4.7119",
+   "avg_price": 198900,
+   "price": 208500,
+   "value": 982437,
+   "change_pct": 4.83,
+   "weight": 10.5
   },
   {
    "name": "마이크로소프트",
    "sector": "AI",
    "qty": "1.3997",
    "avg_price": 714445,
-   "price": 700549,
-   "value": 980550,
-   "change_pct": -1.94,
-   "weight": 10.5
+   "price": 700518,
+   "value": 980515,
+   "change_pct": -1.95,
+   "weight": 10.4
   },
   {
    "name": "록히드마틴",
    "sector": "방산",
    "qty": "1.0962",
    "avg_price": 854933,
-   "price": 854965,
-   "value": 937247,
-   "change_pct": 0.0,
+   "price": 854927,
+   "value": 937196,
+   "change_pct": -0.0,
    "weight": 10.0
   },
   {
@@ -346,60 +356,50 @@
    "sector": "방산",
    "qty": "3.4947",
    "avg_price": 268178,
-   "price": 268188,
-   "value": 937247,
-   "change_pct": 0.0,
+   "price": 268176,
+   "value": 937196,
+   "change_pct": -0.0,
    "weight": 10.0
   },
   {
    "name": "삼성화재",
    "sector": "보험",
-   "qty": "1.4397",
-   "avg_price": 651000,
+   "qty": "1.4243",
+   "avg_price": 658000,
    "price": 651000,
-   "value": 937212,
-   "change_pct": 0.0,
-   "weight": 10.0
-  },
-  {
-   "name": "삼성에스디에스",
-   "sector": "AI",
-   "qty": "4.495",
-   "avg_price": 208500,
-   "price": 208500,
-   "value": 937212,
-   "change_pct": 0.0,
-   "weight": 10.0
+   "value": 927232,
+   "change_pct": -1.06,
+   "weight": 9.9
   },
   {
    "name": "DB손해보험",
    "sector": "보험",
-   "qty": "5.3372",
-   "avg_price": 175600,
+   "qty": "5.1157",
+   "avg_price": 183200,
    "price": 175600,
-   "value": 937212,
-   "change_pct": 0.0,
-   "weight": 10.0
+   "value": 898323,
+   "change_pct": -4.15,
+   "weight": 9.6
   },
   {
    "name": "마이크론",
    "sector": "반도체",
    "qty": "0.6991",
    "avg_price": 1430395,
-   "price": 1187569,
-   "value": 830238,
+   "price": 1187516,
+   "value": 830192,
    "change_pct": -16.98,
-   "weight": 8.9
+   "weight": 8.8
   },
   {
    "name": "삼성생명",
    "sector": "보험",
-   "qty": "2.5511",
-   "avg_price": 272000,
+   "qty": "2.6381",
+   "avg_price": 263000,
    "price": 272000,
-   "value": 693891,
-   "change_pct": 0.0,
-   "weight": 7.4
+   "value": 717572,
+   "change_pct": 3.42,
+   "weight": 7.6
   }
  ],
  "trades": [
@@ -448,22 +448,8 @@
   {
    "date": "2026-11-02",
    "action": "🔵매도",
-   "name": "GE버노바",
-   "profit_pct": "-14.85",
-   "reason": "모멘텀 상위 10개에서 빠짐"
-  },
-  {
-   "date": "2026-11-02",
-   "action": "🔵매도",
    "name": "로켓랩",
    "profit_pct": "-27.24",
-   "reason": "모멘텀 상위 10개에서 빠짐"
-  },
-  {
-   "date": "2026-11-02",
-   "action": "🔵매도",
-   "name": "테슬라",
-   "profit_pct": "4.03",
    "reason": "모멘텀 상위 10개에서 빠짐"
   },
   {
@@ -476,8 +462,8 @@
   {
    "date": "2026-11-02",
    "action": "🔵매도",
-   "name": "엔비디아",
-   "profit_pct": "-15.99",
+   "name": "GE버노바",
+   "profit_pct": "-14.85",
    "reason": "모멘텀 상위 10개에서 빠짐"
   },
   {
@@ -485,6 +471,20 @@
    "action": "🔵매도",
    "name": "TSMC",
    "profit_pct": "-16.64",
+   "reason": "모멘텀 상위 10개에서 빠짐"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "🔵매도",
+   "name": "엔비디아",
+   "profit_pct": "-15.99",
+   "reason": "모멘텀 상위 10개에서 빠짐"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "🔵매도",
+   "name": "테슬라",
+   "profit_pct": "4.03",
    "reason": "모멘텀 상위 10개에서 빠짐"
   },
   {
