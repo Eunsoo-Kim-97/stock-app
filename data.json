@@ -3,16 +3,16 @@
  "price_status": "오늘 종가",
  "live": {
   "date": "2026-11-02",
-  "time": "마감",
-  "value": 9084869
+  "time": "21:39",
+  "value": 9369227
  },
  "strategy": "④ 듀얼 모멘텀 (월 1회)",
  "start_cash": 10000000,
- "principal": 10000000,
+ "principal": 10300000,
  "monthly_deposit": 300000,
- "value": 9084869,
+ "value": 9369227,
  "cash": 0,
- "return_pct": -9.15,
+ "return_pct": -9.04,
  "next_rebalance": "12/01(화)",
  "history": [
   {
@@ -90,10 +90,6 @@
   {
    "date": "2026-10-30",
    "value": 9308928
-  },
-  {
-   "date": "2026-11-02",
-   "value": 9084869
   }
  ],
  "holidays": {
@@ -216,7 +212,7 @@
    },
    {
     "date": "2026-11-02",
-    "value": 8440788
+    "value": 8740788
    }
   ],
   "sp500": [
@@ -304,29 +300,19 @@
    "sector": "보험",
    "qty": "2.2544",
    "avg_price": 443572,
-   "price": 488733,
-   "value": 1101812,
-   "change_pct": 10.18,
-   "weight": 12.1
+   "price": 488926,
+   "value": 1102247,
+   "change_pct": 10.22,
+   "weight": 11.8
   },
   {
    "name": "버크셔해서웨이",
    "sector": "보험",
    "qty": "1.4756",
    "avg_price": 677707,
-   "price": 728146,
-   "value": 1074427,
-   "change_pct": 7.44,
-   "weight": 11.8
-  },
-  {
-   "name": "테슬라",
-   "sector": "2차전지",
-   "qty": "1.9482",
-   "avg_price": 513286,
-   "price": 536637,
-   "value": 1045494,
-   "change_pct": 4.55,
+   "price": 728434,
+   "value": 1074851,
+   "change_pct": 7.49,
    "weight": 11.5
   },
   {
@@ -334,73 +320,174 @@
    "sector": "AI",
    "qty": "1.3997",
    "avg_price": 714445,
-   "price": 700523,
-   "value": 980514,
-   "change_pct": -1.95,
-   "weight": 10.8
+   "price": 700800,
+   "value": 980901,
+   "change_pct": -1.91,
+   "weight": 10.5
   },
   {
-   "name": "엔비디아",
-   "sector": "반도체",
-   "qty": "3.0739",
-   "avg_price": 325322,
-   "price": 274674,
-   "value": 844314,
-   "change_pct": -15.57,
-   "weight": 9.3
+   "name": "록히드마틴",
+   "sector": "방산",
+   "qty": "1.0962",
+   "avg_price": 854933,
+   "price": 855271,
+   "value": 937583,
+   "change_pct": 0.04,
+   "weight": 10.0
   },
   {
-   "name": "TSMC",
-   "sector": "반도체",
-   "qty": "1.5368",
-   "avg_price": 650684,
-   "price": 545120,
-   "value": 837764,
-   "change_pct": -16.22,
-   "weight": 9.2
+   "name": "RTX",
+   "sector": "방산",
+   "qty": "3.4947",
+   "avg_price": 268178,
+   "price": 268283,
+   "value": 937583,
+   "change_pct": 0.04,
+   "weight": 10.0
   },
   {
-   "name": "GE버노바",
-   "sector": "전력",
-   "qty": "0.7246",
-   "avg_price": 1345564,
-   "price": 1151459,
-   "value": 834404,
-   "change_pct": -14.43,
-   "weight": 9.2
+   "name": "삼성화재",
+   "sector": "보험",
+   "qty": "1.4397",
+   "avg_price": 651000,
+   "price": 651000,
+   "value": 937212,
+   "change_pct": 0.0,
+   "weight": 10.0
+  },
+  {
+   "name": "삼성에스디에스",
+   "sector": "AI",
+   "qty": "4.495",
+   "avg_price": 208500,
+   "price": 208500,
+   "value": 937212,
+   "change_pct": 0.0,
+   "weight": 10.0
+  },
+  {
+   "name": "DB손해보험",
+   "sector": "보험",
+   "qty": "5.3372",
+   "avg_price": 175600,
+   "price": 175600,
+   "value": 937212,
+   "change_pct": 0.0,
+   "weight": 10.0
   },
   {
    "name": "마이크론",
    "sector": "반도체",
    "qty": "0.6991",
    "avg_price": 1430395,
-   "price": 1187525,
-   "value": 830207,
-   "change_pct": -16.98,
-   "weight": 9.1
-  },
-  {
-   "name": "알파벳",
-   "sector": "AI",
-   "qty": "2.1423",
-   "avg_price": 466778,
-   "price": 375610,
-   "value": 804685,
-   "change_pct": -19.53,
+   "price": 1187993,
+   "value": 830535,
+   "change_pct": -16.95,
    "weight": 8.9
   },
   {
-   "name": "로켓랩",
-   "sector": "우주항공",
-   "qty": "9.9543",
-   "avg_price": 100459,
-   "price": 73460,
-   "value": 731248,
-   "change_pct": -26.88,
-   "weight": 8.0
+   "name": "삼성생명",
+   "sector": "보험",
+   "qty": "2.5511",
+   "avg_price": 272000,
+   "price": 272000,
+   "value": 693891,
+   "change_pct": 0.0,
+   "weight": 7.4
   }
  ],
  "trades": [
+  {
+   "date": "2026-11-02",
+   "action": "🔴매수",
+   "name": "삼성생명",
+   "profit_pct": "",
+   "reason": "6개월 수익률 +2%"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "🔴매수",
+   "name": "DB손해보험",
+   "profit_pct": "",
+   "reason": "6개월 수익률 +11%"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "🔴매수",
+   "name": "RTX",
+   "profit_pct": "",
+   "reason": "6개월 수익률 +12%"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "🔴매수",
+   "name": "삼성에스디에스",
+   "profit_pct": "",
+   "reason": "6개월 수익률 +22%"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "🔴매수",
+   "name": "록히드마틴",
+   "profit_pct": "",
+   "reason": "6개월 수익률 +24%"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "🔴매수",
+   "name": "삼성화재",
+   "profit_pct": "",
+   "reason": "6개월 수익률 +39%"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "🔵매도",
+   "name": "GE버노바",
+   "profit_pct": "-14.85",
+   "reason": "모멘텀 상위 10개에서 빠짐"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "🔵매도",
+   "name": "로켓랩",
+   "profit_pct": "-27.24",
+   "reason": "모멘텀 상위 10개에서 빠짐"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "🔵매도",
+   "name": "테슬라",
+   "profit_pct": "4.03",
+   "reason": "모멘텀 상위 10개에서 빠짐"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "🔵매도",
+   "name": "알파벳",
+   "profit_pct": "-19.93",
+   "reason": "모멘텀 상위 10개에서 빠짐"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "🔵매도",
+   "name": "엔비디아",
+   "profit_pct": "-15.99",
+   "reason": "모멘텀 상위 10개에서 빠짐"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "🔵매도",
+   "name": "TSMC",
+   "profit_pct": "-16.64",
+   "reason": "모멘텀 상위 10개에서 빠짐"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "💰입금",
+   "name": "매달 입금",
+   "profit_pct": "",
+   "reason": "매달 1일 입금 +300,000원"
+  },
   {
    "date": "2026-10-06",
    "action": "🔴매수",
