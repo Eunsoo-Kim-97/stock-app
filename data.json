@@ -1,10 +1,10 @@
 {
- "updated": "11/02 21:41",
+ "updated": "11/05 21:22",
  "price_status": "오늘 종가",
  "live": {
-  "date": "2026-11-02",
+  "date": "2026-11-05",
   "time": "마감",
-  "value": 9386898
+  "value": 9338269
  },
  "strategy": "④ 듀얼 모멘텀 (월 1회)",
  "start_cash": 10000000,
@@ -12,9 +12,9 @@
  "monthly_deposit": 300000,
  "deposit_count": 1,
  "next_deposit": "12/01(화)",
- "value": 9386898,
+ "value": 9338269,
  "cash": 0,
- "return_pct": -8.87,
+ "return_pct": -9.34,
  "next_rebalance": "12/01(화)",
  "history": [
   {
@@ -96,6 +96,18 @@
   {
    "date": "2026-11-02",
    "value": 9386898
+  },
+  {
+   "date": "2026-11-03",
+   "value": 9318877
+  },
+  {
+   "date": "2026-11-04",
+   "value": 9360525
+  },
+  {
+   "date": "2026-11-05",
+   "value": 9338269
   }
  ],
  "holidays": {
@@ -219,6 +231,18 @@
    {
     "date": "2026-11-02",
     "value": 8740788
+   },
+   {
+    "date": "2026-11-03",
+    "value": 8427069
+   },
+   {
+    "date": "2026-11-04",
+    "value": 8479298
+   },
+   {
+    "date": "2026-11-05",
+    "value": 8031747
    }
   ],
   "sp500": [
@@ -297,68 +321,70 @@
    {
     "date": "2026-10-30",
     "value": 9694510
+   },
+   {
+    "date": "2026-11-02",
+    "value": 9945053
+   },
+   {
+    "date": "2026-11-03",
+    "value": 9981345
+   },
+   {
+    "date": "2026-11-04",
+    "value": 10139197
    }
   ]
  },
  "positions": [
   {
-   "name": "처브",
-   "sector": "보험",
-   "qty": "2.2544",
-   "avg_price": 443572,
-   "price": 488729,
-   "value": 1101791,
-   "change_pct": 10.18,
-   "weight": 11.7
-  },
-  {
    "name": "버크셔해서웨이",
    "sector": "보험",
    "qty": "1.4756",
    "avg_price": 677707,
-   "price": 728141,
-   "value": 1074445,
-   "change_pct": 7.44,
-   "weight": 11.4
+   "price": 778071,
+   "value": 1148122,
+   "change_pct": 14.81,
+   "weight": 12.3
   },
   {
-   "name": "삼성에스디에스",
-   "sector": "AI",
-   "qty": "4.7119",
-   "avg_price": 198900,
-   "price": 208500,
-   "value": 982437,
-   "change_pct": 4.83,
-   "weight": 10.5
+   "name": "처브",
+   "sector": "보험",
+   "qty": "2.2544",
+   "avg_price": 443572,
+   "price": 502739,
+   "value": 1133374,
+   "change_pct": 13.34,
+   "weight": 12.1
   },
   {
    "name": "마이크로소프트",
    "sector": "AI",
    "qty": "1.3997",
    "avg_price": 714445,
-   "price": 700518,
-   "value": 980515,
-   "change_pct": -1.95,
-   "weight": 10.4
+   "price": 746778,
+   "value": 1045266,
+   "change_pct": 4.53,
+   "weight": 11.2
   },
   {
-   "name": "록히드마틴",
-   "sector": "방산",
-   "qty": "1.0962",
-   "avg_price": 854933,
-   "price": 854927,
-   "value": 937196,
-   "change_pct": -0.0,
-   "weight": 10.0
+   "name": "삼성에스디에스",
+   "sector": "AI",
+   "qty": "4.7119",
+   "avg_price": 198900,
+   "price": 205000,
+   "value": 965945,
+   "change_pct": 3.07,
+   "weight": 10.3
   },
   {
    "name": "RTX",
    "sector": "방산",
    "qty": "3.4947",
    "avg_price": 268178,
-   "price": 268176,
-   "value": 937196,
-   "change_pct": -0.0,
+   "price": 266613,
+   "value": 931733,
+   "change_pct": -0.58,
    "weight": 10.0
   },
   {
@@ -366,9 +392,9 @@
    "sector": "보험",
    "qty": "1.4243",
    "avg_price": 658000,
-   "price": 651000,
-   "value": 927232,
-   "change_pct": -1.06,
+   "price": 652000,
+   "value": 928657,
+   "change_pct": -0.91,
    "weight": 9.9
   },
   {
@@ -376,30 +402,40 @@
    "sector": "보험",
    "qty": "5.1157",
    "avg_price": 183200,
-   "price": 175600,
-   "value": 898323,
-   "change_pct": -4.15,
-   "weight": 9.6
+   "price": 179200,
+   "value": 916740,
+   "change_pct": -2.18,
+   "weight": 9.8
+  },
+  {
+   "name": "록히드마틴",
+   "sector": "방산",
+   "qty": "1.0962",
+   "avg_price": 854933,
+   "price": 799502,
+   "value": 876437,
+   "change_pct": -6.48,
+   "weight": 9.4
   },
   {
    "name": "마이크론",
    "sector": "반도체",
    "qty": "0.6991",
    "avg_price": 1430395,
-   "price": 1187516,
-   "value": 830192,
-   "change_pct": -16.98,
-   "weight": 8.8
+   "price": 1068479,
+   "value": 746974,
+   "change_pct": -25.3,
+   "weight": 8.0
   },
   {
    "name": "삼성생명",
    "sector": "보험",
    "qty": "2.6381",
    "avg_price": 263000,
-   "price": 272000,
-   "value": 717572,
-   "change_pct": 3.42,
-   "weight": 7.6
+   "price": 244500,
+   "value": 645023,
+   "change_pct": -7.03,
+   "weight": 6.9
   }
  ],
  "trades": [
